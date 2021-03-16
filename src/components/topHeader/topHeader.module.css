@@ -1,0 +1,8 @@
+.header_top {
+    grid-area: h;
+    background: aqua;
+}
+.logo{
+    width: 50px;
+}
+

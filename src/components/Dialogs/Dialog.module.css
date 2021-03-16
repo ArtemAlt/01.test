@@ -1,0 +1,40 @@
+.mainDialogs {
+    display: grid;
+    grid-template-columns: 3fr 10fr;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+
+.dialogsItem {
+    padding: 20px;
+    border: solid 2px white;
+    background: lightblue;
+    margin-bottom: 5px;
+}
+
+.userPost {
+    color: darkblue;
+    padding-bottom: 5px;
+
+}
+
+
+.userPost.activeDialog {
+    color: blue;
+    border: solid 2px white;
+    border-radius: 15px;
+    padding-left: 10px;
+}
+
+.messagesItem {
+    padding: 20px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    border: solid 2px white;
+}
+
+.userMessage {
+
+}
