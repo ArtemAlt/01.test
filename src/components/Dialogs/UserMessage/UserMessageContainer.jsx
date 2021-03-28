@@ -1,31 +1,24 @@
-import React from 'react';
-import cl from "./UserMessage.module.css"
 import {sendMessageActionCreator, updateMessageTextActionCreator} from "../../../redux/messagePageReducer";
-import UserDialogs from "../UserDialogs/UserDialogs";
 import UserMessage from "./UserMessage";
+import {connect} from "react-redux";
 
 
-const UserMessageContainer = (props) => {
-    let state = props.store.getState();
 
-    let onSendMessageClick = () => {
-        props.store.dispatch(sendMessageActionCreator());
-    };
-    let onNewMessageChange = (body) => {
-        props.store.dispatch(updateMessageTextActionCreator(body));
+let mapStateToProps =(state)=>{
+   return{
+       messageData:state.messagesPage.messageData,
+       newMessageText:state.messagesPage.newMessageText
+   }
+}
+let mapDispatchToProps = (dispatch)=>{
+    return{
+        onSendMessageClick:()=>{dispatch(sendMessageActionCreator())},
+        onNewMessageChange:(body)=>{
+            dispatch(updateMessageTextActionCreator(body))
+        }
+    }
+}
 
-    };
-    return (
-        <div>
-            <UserMessage messageData = {state.messagesPage.messagesPage.messageData}
-                         newMessageText={state.messagesPage.messagesPage.newMessageText}
-                         onSendMessageClick={onSendMessageClick}
-                         onNewMessageChange={onNewMessageChange}/>
-
-
-        </div>
-    );
-};
-
+let UserMessageContainer = connect(mapStateToProps,mapDispatchToProps)(UserMessage);
 
 export default UserMessageContainer;

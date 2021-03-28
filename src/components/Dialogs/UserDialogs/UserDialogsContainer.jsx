@@ -1,16 +1,18 @@
-
 import UserDialogs from "./UserDialogs";
+import {connect} from "react-redux";
 
 
-const UserDialogContainer = (props) => {
-    let state = props.store.getState();
-    return (
-        <div>
-            <UserDialogs userDialog ={state.messagesPage.messagesPage.dialogData} />
-        </div>
+let mapStateToProps=(state)=>{
+    return{
+        userDialog:state.messagesPage.dialogData
 
-    );
-};
+    }
+}
+let mapDispatchToProps=(dispatch)=>{
+    return{    }
+}
+
+let UserDialogContainer = connect(mapStateToProps,mapDispatchToProps)(UserDialogs);
 
 
 export default UserDialogContainer;
