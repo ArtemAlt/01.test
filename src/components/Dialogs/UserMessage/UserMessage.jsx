@@ -3,7 +3,7 @@ import cl from "./UserMessage.module.css"
 
 
 const UserMessage = (props) => {
-    let MessageDataArray = props.messageData.map(msg => (<div> {msg.message}</div>))
+    let MessageDataArray = props.messageData.map(msg => (<div key={msg.id}> {msg.message}</div>))
     let newMessageBody = props.newMessageText;
     let onSendMessageClick = ()=>{
         props.onSendMessageClick ();

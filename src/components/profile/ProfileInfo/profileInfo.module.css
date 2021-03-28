@@ -6,3 +6,10 @@
     border-radius: 5px;
     margin-bottom: 5px;
 }
+
+.previewAvatar{
+    height: 50px;
+    padding: 1px;
+    margin-left: 15px;
+    border: 1px solid #EBEBEB;
+}

@@ -4,16 +4,15 @@ import UserMessageContainer from "./UserMessage/UserMessageContainer";
 import UserDialogsContainer from "./UserDialogs/UserDialogsContainer";
 
 
-const Dialogs = (props) => {
-debugger
+const Dialogs = () => {
     return (
         <div>
             <div className={cl.mainDialogs}>
                 <div className={cl.dialogsItem}>
-                    <UserDialogsContainer store={props.store} />
+                    <UserDialogsContainer />
                 </div>
                 <div className={cl.messagesItem}>
-                    <UserMessageContainer store = {props.store} />
+                    <UserMessageContainer />
                 </div>
 
             </div>
