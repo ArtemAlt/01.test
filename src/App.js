@@ -17,12 +17,18 @@ const App = () => {
                 <TopHeader/>
                 <LeftNavigation/>
                 <div className="appWrapperMainFrame">
-                    <Route path="/dialogs" render={() => <Dialogs/>}/>
-                    <Route path="/profile" render={() => <ProfileContainer />}/>
-                    <Route path="/users" render={() => <UsersContainer/>}/>
-                    <Route path="/music" render={() => <Music/>}/>
-                    <Route path="/settings" render={() => <Settings/>}/>
-                    <Route path="/news" render={() => <News/>}/>
+                    <Route path="/dialogs"
+                           render={() => <Dialogs/>}/>
+                    <Route path="/profile/:userId?"
+                           render={() => <ProfileContainer />}/>
+                    <Route path="/users"
+                           render={() => <UsersContainer/>}/>
+                    <Route path="/music"
+                           render={() => <Music/>}/>
+                    <Route path="/settings"
+                           render={() => <Settings/>}/>
+                    <Route path="/news"
+                           render={() => <News/>}/>
                 </div>
             </div>
         </div>
